@@ -38,7 +38,7 @@ class LocalGtpBot:
         # See: https://github.com/maxpumperla/deep_learning_and_the_game_of_go/issues/44
         print(cmd)
         self.gtp_stream = subprocess.Popen(
-            cmd, stdin=pipe, stdout=pipe,  # <5>
+            cmd, cwd=r'C:\software\Pachi-12.60', stdin=pipe, stdout=pipe,  # <5>
             bufsize=0
         )
 
