@@ -33,10 +33,10 @@ class DeepLearningAgent(Agent):
 # end::dl_agent_predict[]
 
 # tag::dl_agent_probabilities[]
-        move_probs = move_probs ** 3  # <1>
-        eps = 1e-6
-        move_probs = np.clip(move_probs, eps, 1 - eps)  # <2>
-        move_probs = move_probs / np.sum(move_probs)  # <3>
+#         move_probs = move_probs ** 3  # <1>
+#         eps = 1e-6
+#         move_probs = np.clip(move_probs, eps, 1 - eps)  # <2>
+#         move_probs = move_probs / np.sum(move_probs)  # <3>
 # <1> Increase the distance between the move likely and least likely moves.
 # <2> Prevent move probs from getting stuck at 0 or 1
 # <3> Re-normalize to get another probability distribution.
